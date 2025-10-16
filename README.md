@@ -1,4 +1,4 @@
-# Environment Monitor Dashboard
+# 🌿Environment Monitor Dashboard
 
 ## 基于 Java 的环境监测数据可视化系统
 
@@ -6,7 +6,7 @@
 
 ---
 
-## 项目简介
+## 📖一、项目简介
 
 本系统旨在构建一个完整的环境监测数据看板，能够实时接收传感器数据（如温度、湿度、PM2.5等），对数据进行可视化、超标检测与统计分析，并自动生成可导出的 PDF 报告。
 
@@ -14,7 +14,7 @@
 
 ---
 
-## 系统功能模块
+## 🧩二、系统功能模块
 
 | 模块 | 功能描述 |
 |------|----------|
@@ -28,7 +28,7 @@
 
 ---
 
-## 系统架构设计
+## 🏗️三、系统架构设计
 ```
 
 src/
@@ -49,7 +49,7 @@ src/
 ```
 ---
 
-## 主要技术栈
+## ⚙️四、主要技术栈
 
 | 分类 | 技术 |
 |------|------|
@@ -64,7 +64,7 @@ src/
 
 ---
 
-## 团队分工
+## 👥五、团队分工（共6人）
 
 | 成员 | 角色 | 主要任务 |
 |------|------|----------|
@@ -74,3 +74,70 @@ src/
 | 成员D | 数据库开发 | MySQL结构设计、JDBC数据存取 |
 | 成员E | 数据统计与报表 | 数据分析模块、PDF报表导出 |
 | 成员F | 测试与文档 | 测试功能、编写项目说明与汇报PPT |
+## 🧠六、数据库设计（示例）
+
+### 1. 传感器数据表 sensor_data
+
+| 字段名 | 类型 | 说明 |
+|--------|------|------|
+| id | INT | 主键 |
+| sensor_name | VARCHAR(50) | 传感器名称 |
+| value | DOUBLE | 当前数值 |
+| threshold | DOUBLE | 超标阈值 |
+| timestamp | DATETIME | 采集时间 |
+
+### 2. 警报日志表 alert_log
+
+| 字段名 | 类型 | 说明 |
+|--------|------|------|
+| id | INT | 主键 |
+| sensor_id | INT | 对应传感器 |
+| message | VARCHAR(255) | 警报信息 |
+| alert_time | DATETIME | 触发时间 |
+
+---
+
+## 💼七、运行环境配置
+
+### 1. 安装环境：
+- JDK 17 或以上
+- MySQL 8.0
+- IntelliJ IDEA（推荐）
+- Maven 3.8+
+
+### 2. 运行步骤：
+```bash
+git clone https://github.com/你的用户名/environment-monitor-dashboard.git
+cd environment-monitor-dashboard
+mvn clean install
+mvn exec:java
+```
+
+3. 数据库配置文件：
+
+在 src/main/resources/db.properties 中设置：
+
+```
+db.url=jdbc:mysql://localhost:3306/environment_db
+db.user=root
+db.password=你的密码
+```
+
+---
+
+## 🧾八、项目规划
+
+- ✅ **第一阶段**：框架搭建 + 模拟数据接入
+- ✅ **第二阶段**：图形界面与数据库联调
+- ✅ **第三阶段**：数据分析与报表导出
+- ✅ **第四阶段**：系统优化与项目汇报
+
+---
+
+## 🧡九、项目目标
+
+- 提升 Java 实战开发能力
+- 熟练掌握多线程与 Socket 通信
+- 掌握数据库与数据可视化整合
+- 完成一个具备实际功能的完整系统项目
+
