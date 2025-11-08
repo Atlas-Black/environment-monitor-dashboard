@@ -1,8 +1,10 @@
-# 在 .gitignore 中添加
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Maven / Gradle
 target/
 *.class
-.idea/
-git add sensor-client/src/
-git add sensor-server/src/
-git add sensor-server/pom.xml
-git add sensor-server/src/main/resources/
+
+# 临时文件
+*.log
