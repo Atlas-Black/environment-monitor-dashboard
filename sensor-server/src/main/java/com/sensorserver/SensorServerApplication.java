@@ -1,13 +1,16 @@
-package com.server;
 
 //启动类+服务逻辑
 //主启动类，Spring Boot入口
 //运行，则为启动整个后端服务
 
+package com.sensorserver;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+
+@SpringBootApplication(scanBasePackages = "com.sensorserver")
 public class SensorServerApplication {
     public static void main(String[] args) {
         SpringApplication.run(SensorServerApplication.class, args);

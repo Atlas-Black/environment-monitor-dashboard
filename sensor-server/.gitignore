@@ -1,0 +1,10 @@
+# IDE 和配置文件
+.idea/
+*.iml
+
+# Maven 构建目录
+target/
+
+# 临时文件
+*.log
+*.png

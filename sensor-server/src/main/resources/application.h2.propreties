@@ -1,20 +1,14 @@
-# =====================================
-# 选择数据库：h2 或 mysql
-# =====================================
-spring.profiles.active=h2   # 当前激活的环境，改为 mysql 使用 MySQL
+spring.application.name=sensor-server
+server.port=8080
 
-# -------- H2 配置 --------
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.url=jdbc:h2:mem:sensor_db
+spring.datasource.driver-class-name=org.h2.Driver
 spring.datasource.username=sa
 spring.datasource.password=
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-spring.h2.console.enabled=true
 
-# -------- MySQL 配置 --------
-# 注意：mysql 配置只有在 spring.profiles.active=mysql 时生效
-spring.datasource.mysql.url=jdbc:mysql://localhost:3306/sensordb?useSSL=false&serverTimezone=UTC
-spring.datasource.mysql.username=root
-spring.datasource.mysql.password=你的密码
-spring.jpa.mysql.hibernate.ddl-auto=update
-spring.jpa.mysql.show-sql=true
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true

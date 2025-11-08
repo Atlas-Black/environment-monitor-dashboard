@@ -6,7 +6,6 @@ import java.net.URL;
 import java.util.Random;
 
 public class SensorDataSimulator {
-
     // 修改为你的后端实际地址
     private static final String API_URL = "http://localhost:8080/api/sensor/data";
     private static final int SENSOR_COUNT = 3;

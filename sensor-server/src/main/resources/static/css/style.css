@@ -1,0 +1,40 @@
+<style>
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f9f9fb;
+    color: #333;
+    text-align: center;
+}
+h1 {
+    color: #222;
+}
+#data {
+    font-size: 1.2em;
+    margin: 10px 0;
+    background: #eef5ff;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+table {
+    width: 80%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+th {
+    background: #f0f4ff;
+}
+canvas {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+</style>

@@ -1,10 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <meta charset="UTF-8">
+    <title>传感器监测系统</title>
+    <!-- 引入 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- 引入主脚本 -->
+    <script defer src="main.js?v=3"></script>
+    //PDF
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <style>
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            margin: 40px;
+            background-color: #f4f6f8;
+        }
+        h1 {
+            color: #333;
+        }
+        #data {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+    </style>
 </head>
+
 <body>
-$END$
+<h1>🌡️ 环境监测仪表板</h1>
+<div id="alert" style="color:red; font-weight:bold; display:none;"></div>
+
+<!-- ✅ 实时数据显示区域 -->
+<div id="data">
+    🌡️ 温度：--°C<br>
+    💧 湿度：--%<br>
+    🌫️ PM2.5：-- μg/m³
+</div>
+
+<h2>📊 传感器数据表</h2>
+
+<!-- ✅ 数据表格 -->
+<table id="data-table">
+    <tr>
+        <th>传感器ID</th>
+        <th>温度 (°C)</th>
+        <th>湿度 (%)</th>
+        <th>PM2.5 (μg/m³)</th>
+    </tr>
+</table>
+
+<h2>📈 实时折线图</h2>
+<!-- ✅ 图表 Canvas -->
+<canvas id="sensorChart" width="600" height="300"></canvas>
+
+<button id="enableSound" style="position: fixed; top: 20px; left: 20px; padding: 10px 20px; font-size: 16px; z-index: 10000;">
+    🔊 启用报警声音
+</button>
+<button id="generateReport">📄 生成PDF报告</button>
+
+<div>
+    <p>温度：<span id="temperature">--</span> °C</p>
+    <p>湿度：<span id="humidity">--</span> %</p>
+    <p>PM2.5：<span id="pm25">--</span></p>
+</div>
+
 </body>
 </html>
