@@ -1,10 +1,8 @@
-# IDE 和配置文件
-.idea/
-*.iml
-
-# Maven 构建目录
+# 在 .gitignore 中添加
 target/
-
-# 临时文件
-*.log
-*.png
+*.class
+.idea/
+git add sensor-client/src/
+git add sensor-server/src/
+git add sensor-server/pom.xml
+git add sensor-server/src/main/resources/
