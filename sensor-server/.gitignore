@@ -1,10 +1,39 @@
+# macOS
+.DS_Store
+
 # IntelliJ IDEA
 .idea/
 *.iml
 
-# Maven / Gradle
+# Build output
 target/
+out/
+build/
+
+# Logs
+*.log
+
+# Java
 *.class
 
-# 临时文件
-*.log
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Node / frontend
+node_modules/
+dist/
+
+# VS Code
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Generated files
+*.pid
+*.seed
+*.pid.lock
+
+# Optional: OS / temp files
+Thumbs.db
