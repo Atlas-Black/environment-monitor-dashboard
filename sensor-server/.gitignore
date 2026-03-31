@@ -7,15 +7,17 @@
 
 # Build output
 target/
-*/target/
 out/
 build/
+
+# Logs
+*.log
 
 # Java
 *.class
 
-# Logs
-*.log
+# Maven
+.mvn/wrapper/maven-wrapper.jar
 
 # Node / frontend
 node_modules/
@@ -24,6 +26,14 @@ dist/
 # VS Code
 .vscode/
 
-# Env
+# Environment files
 .env
 .env.*
+
+# Generated files
+*.pid
+*.seed
+*.pid.lock
+
+# Optional: OS / temp files
+Thumbs.db
