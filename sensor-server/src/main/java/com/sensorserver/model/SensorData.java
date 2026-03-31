@@ -17,7 +17,7 @@ public class SensorData {
     private String sensorId;
     private double temperature;
     private double humidity;
-    private double pm25; // ✅ 新增 PM2.5 字段
+    private double pm25; // PM2.5 字段
     private LocalDateTime timestamp;
 
     public Long getId() {

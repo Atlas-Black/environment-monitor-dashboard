@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("✅ main.js 已加载");
 
-    const apiUrl = "http：//localhost:8080/api/sensor/latest";
+    const apiUrl = "http://localhost:8080/api/sensor/latest";
     const analysisUrl = "http://localhost:8080/api/analysis/latest";
 
     // 报警日志
